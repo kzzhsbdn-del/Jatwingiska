@@ -13,7 +13,6 @@
     --text: #e7ecf3;
     --text-muted: #8b9bb4;
     --accent: #3b82f6;
-    --accent-hover: #2563eb;
     --source-bg: #1e3a5f;
     --source-text: #93c5fd;
     --card-hover: #2a3a52;
@@ -66,7 +65,7 @@
     color: white;
   }
   main {
-    max-width: 960px;
+    max-width: 980px;
     margin: 0 auto;
     padding: 1.5rem;
   }
@@ -163,11 +162,10 @@
     padding: 0.2rem 0.55rem;
     border-radius: 6px;
     white-space: nowrap;
-    max-width: 200px;
+    max-width: 220px;
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  .entry.hidden { display: none; }
   .subtabs {
     display: flex;
     flex-wrap: wrap;
@@ -198,9 +196,9 @@
     overflow-x: auto;
   }
   .grammar-section.active { display: block; }
-  .grammar-section h1, .grammar-section h2, .grammar-section h3 {
+  .grammar-section h1, .grammar-section h2, .grammar-section h3, .grammar-section h4 {
     margin: 1.25rem 0 0.75rem;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
   }
   .grammar-section h1:first-child, .grammar-section > p:first-child {
     margin-top: 0;
@@ -212,11 +210,11 @@
     width: 100%;
     border-collapse: collapse;
     margin: 1rem 0;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
   }
   .grammar-table th, .grammar-table td {
     border: 1px solid var(--border);
-    padding: 0.5rem 0.65rem;
+    padding: 0.45rem 0.6rem;
     text-align: left;
   }
   .grammar-table th {
@@ -268,7 +266,8 @@ VII. Naura recon модернизация слова, на основе наре
 VIII. Recon реконструкция, на базе иных слов тут представленных
 IX. Ru русское заимствование
 X. By белорусское заимствование
-XI. Prg прусский вариант, значит слово прусского происхождения</div>
+XI. Prg прусский вариант, значит слово прусского происхождения
+XII. Pol польское заимствование</div>
     <div id="entries"></div>
     <div class="no-results" id="noResults" style="display:none;">Ничего не найдено</div>
   </div>
@@ -796,6 +795,9 @@ tojas → wairuotojas. <strong>Аналог в русском:</strong> -тел�
 перед -ti стоит согласная (не гласная): там иногда используется другой,
 менее продуктивный суффикс деятеля (-ējas), это нужно проверять по
 словарю для конкретного глагола.</p>
+<p><strong>-nica –– хранилище чего-то</strong></p>
+<p><strong>От чего:</strong> от существительных, образуется к корню.
+Аналог в русском –– -ница</p>
 <p><strong>-īkla — место, где происходит действие</strong></p>
 <p><strong>От чего:</strong> от основы глагола (часто совпадающей с
 корнем настоящего времени). <strong>Как клеится:</strong> корень +
@@ -858,8 +860,8 @@ greitumas; did<strong>elis</strong> → did- + umas → didumas.
 абстрактное, «сущностное» качество: teisībē — правда как понятие), -umas
 чаще про степень признака, который можно «замерить» (didumas — величина,
 greitumas — скорость).</p>
-<p><strong>Уменьшительные суффиксы: -elis (м.р.), -ītē/-aitē (ж.р.),
--elis/-ēlē (ласкательные)</strong></p>
+<p><strong>Уменьшительные суффиксы: -elis (м.р.), -ele
+(ж.р.)</strong></p>
 <p><strong>От чего:</strong> от основы существительного — убираем
 окончание именительного падежа (-as, -is, -a, -ē, -uo и т.д.).
 <strong>Как клеится:</strong> основа + суффикс + обычное родовое
@@ -935,17 +937,14 @@ dēmētas. <strong>Аналог в русском:</strong> -ат-ый/-аст-�
 гласная суффикса причастия «копирует» гласную 3-го лица наст.
 времени:</p>
 <ul>
-<li><p>3 л. на -a → <strong>-amas</strong> (rada → radamas —
-«делаемый»);</p></li>
-<li><p>3 л. на -o → <strong>-omas</strong> (mato → matomas —
+<li><p>3 л. на -o → <strong>-omas</strong> (maco → macomas —
 «видимый»);</p></li>
-<li><p>3 л. на -i → <strong>-imas</strong> (girdi → girdimas —
-«слышимый»). <strong>Аналог в русском:</strong> -ем-ый/-им-ый (видимый,
+<li><p><strong>Аналог в русском:</strong> -ем-ый/-им-ый (видимый,
 слышимый) — почти прямая параллель, только в русском выбор -ем-/-им-
 тоже зависит от спряжения глагола, что удобно запомнить как аналогичный
 принцип. <strong>Практика:</strong> ключевая ловушка — не путать с
 отглагольным существительным на -imas (skaitīmas «чтение» ws. причастие
-skaitomas «читаемый»): смотрите, от какой основы образовано слово — от
+skaitījomas «читаемый»): смотрите, от какой основы образовано слово — от
 инфинитива (сущ.) или от настоящего времени (причастие).</p></li>
 </ul>
 <p><strong>-esnis — сравнительная степень (формально не «суффикс
@@ -1045,7 +1044,7 @@ const DICT_ENTRIES = [
   "Dumos дым (naura recon dumo)",
   "Wiros мужчина (naura ist)",
   "Wirba женщина (naura ist)",
-  "Degt жечь (naura ist)",
+  "Degt гореть (naura ist)",
   "Lelis большой (naura recon lels)",
   "Tālis дальний (prg Tālis)",
   "Taūwis ближний (prg Taūwis)",
@@ -1143,10 +1142,7 @@ const DICT_ENTRIES = [
   "Dezinencija окончание (lat flexio/desinentio)",
   "Subjektumas подлежащее (lat subiectum)",
   "Predikatumas сказуемое (lat predicatum)",
-  "baltas, melnos, zeldas, raudes, zal‘jan, brunas, sinas, sīwas, bordos,",
-  "wioletas, oranžas, galīmbas, rozainas — белый, чёрный, жёлтый, красный,",
-  "зелёный, коричневый, синий, серый, бордовый, фиолетовый, оранжевый,",
-  "голубой, розовый (recon)",
+  "baltas, melnos, zeldas, raudes, zal‘jan, brunas, sinas, sīwas, bordos, wioletas, oranžas, galīmbas, rozainas — белый, чёрный, жёлтый, красный, зелёный, коричневый, синий, серый, бордовый, фиолетовый, оранжевый, голубой, розовый (recon)",
   "Janwāris январь (latw-recon)",
   "Februāris февраль (latw-recon)",
   "Martas Март (latw-recon)",
@@ -1184,7 +1180,7 @@ const DICT_ENTRIES = [
   "Ziro озеро (naura ist)",
   "Weda путь, дорог (naura ist)",
   "Gult лежать (naura ist)",
-  "Statinīt ставит (prg statinītun)",
+  "Statīt ставить (lit statyti)",
   "Kauna гора (naura recon)",
   "Kapurna холм, курган (prg kapurna)",
   "Kwei где (prg kwei)",
@@ -1199,7 +1195,7 @@ const DICT_ENTRIES = [
   "Laiskas книга (sudov)",
   "Letas дождь (naura recon)",
   "Līt лить (prg lītun)",
-  "Wūmbaras ведро (prg wūmbars)",
+  "Wumbaras ведро (prg wūmbars)",
   "Kai как (sudov)",
   "Anketa анкета, опросник (prg ankēti)",
   "Laiha свет (naura ist)",
@@ -1249,7 +1245,7 @@ const DICT_ENTRIES = [
   "Kodas код (inter)",
   "Eiskint объяснять (prg eīskintun)",
   "Druwit верить (prg druwītwei)",
-  "Eiskinsna объяснение",
+  "Eiskinsna объяснение (prg eīskinsnā)",
   "Auginis линза (recon)",
   "Hadas дом (naura recon)",
   "Maslint клеить (prg māslintun)",
@@ -1265,7 +1261,7 @@ const DICT_ENTRIES = [
   "Laukusna звезда (sudov)",
   "Akmis камень (naura recon)",
   "Automatas автомат (inter)",
-  "Saka сказка",
+  "Saka сказка (sudov)",
   "Gerbt рассказывать (prg gērbtun)",
   "Gerbsenis рассказ (prg gērbsenis)",
   "Augraust разрушать (prg augraūstun)",
@@ -1310,7 +1306,7 @@ const DICT_ENTRIES = [
   "Majonezas майонез (inter)",
   "Dadan молоко (sudov)",
   "Malt молоть (sudov)",
-  "Prasan просо",
+  "Prasan просо (sudov)",
   "Etrasenis ответ (prg etrāsenis)",
   "Etrat отвечать (prg etrātwei)",
   "Kandi зачем (naura ist)",
@@ -1342,7 +1338,7 @@ const DICT_ENTRIES = [
   "Internetas интернет (inter)",
   "Tintlan сеть (sudov)",
   "Swētan мир (sudov)",
-  "Swentiskas святой",
+  "Swentiskas святой (sudov)",
   "Snīt крутить (sudov)",
   "Snīt si крутиться (recon)",
   "Arhiwas архив (inter)",
@@ -1350,16 +1346,129 @@ const DICT_ENTRIES = [
   "Tawe тебя (lit tave)",
   "Tau тебе (lit tau)",
   "Sawe себя (lit save)",
-  "Sau себе (lit sau)"
+  "Sau себе (lit sau)",
+  "Kart висеть (prg kartwei)",
+  "Baras участок, полоса (lit baras)",
+  "Drīzis полоса (lit dryzis)",
+  "Auto авто (inter)",
+  "Automobilan автомобиль (recon)",
+  "Tenst продолжать (lit tęsti)",
+  "Bat но (naura ist)",
+  "Pasibas поиск (naura recon)",
+  "Sibt искать (naura ist)",
+  "Slibt прятать (naura ist)",
+  "Wirst становиться, превращаться в кого-то (sudov)",
+  "Raidenica тетрадка (recon)",
+  "Raide буква (lit raidė)",
+  "Degint жечь(lit deginti)",
+  "Ugnes огонь (naura recon)",
+  "Šablonas шаблон (inter)",
+  "Forma форма (inter)",
+  "Tabela таблица (pol)",
+  "Tabelis табель (lit tabelis)",
+  "Taudas народ (naura recon)",
+  "Gelzis железо (lit gelžis)",
+  "Gleizan рельса (prg gēizan)",
+  "Wisadan всегда (sudov)",
+  "Gattawint готовить (prg gattawintun)",
+  "Wista курица (sudov)",
+  "Wobilis клевер (sudov)",
+  "Wogt красть (sudov)",
+  "Pagaut начинать (prg pagaūtun)",
+  "Pagausenis начало (prg pagaūsenis)",
+  "Pagauwingis начальный (prg pagaūwingis)",
+  "Protas ум (lit protas)",
+  "Protingas умный (lit protingas)",
+  "Spartingas сильный (sudov recon)",
+  "Dumumas тьма, темнота (recon)",
+  "Atnaujint обновлять (lit atnaujinti)",
+  "Atnaujinimas обновление (lit atnaujinimasa)",
+  "Kalēdos рождетство (lit kalėdos)",
+  "Metan год (sudov)",
+  "Naudingas полезный, выгодный (lit naudingas)",
+  "Mugē ярмарка, сезонный базар (lit mugė)",
+  "Mūte мыло (sudov)",
+  "Lidinot летать (sudov)",
+  "Rīpt следовать (sudov)",
+  "Antklode одеяло (lit antklodė)",
+  "Irm есть (naura ist)",
+  "Istorija история (inter)",
+  "Geografija география (inter)",
+  "Landšaftas ландшафт (inter)",
+  "Foto фото (inter)",
+  "Fotografēt фотографировать (recon)",
+  "Gragika графика (inter)",
+  "Waizdas вид (lit vaizdas)",
+  "Rūsis погреб (lit rūsys)",
+  "Pagrindinis основной, главный (lit pagrindinis)",
+  "Skīrus отдел (lit skyrius)",
+  "Kontraktas контракт (inter)",
+  "Skirsnis глава (lit skrisnis)",
+  "Wirsininkas начальник (lit viršininkas)",
+  "Instatīmas вставка (lit įstatymas)",
+  "Tart произносить (lit tarti)",
+  "Girbaut считать (prg gīrbautun)",
+  "Geitis хлеб (sudov)",
+  "Platit платить (prg platītwei)",
+  "Ebmīlint пачкать (prg ebmīlintun)",
+  "Buffetan буфет (prg buffetan)",
+  "Asanis осень (sudov)",
+  "Dagas лето (sudov)",
+  "Arte искусство (ital. Arte)",
+  "Artifikalis искусственный (lat artificalis)",
+  "Sintetika синтетика (inter)",
+  "Sintetinis синтеческий (inter)",
+  "Drukkaut печатать (prg drukkautun)",
+  "Zeima зима (sudov)",
+  "Zeidīt строить (sudov)",
+  "Zeidas стена (sudov)",
+  "Zuppas суп (prg zuppi)",
+  "Zandas челюсть (sudov)",
+  "Zumbras зубр, бизон (sudov)",
+  "Zaida игра (sudov)",
+  "Zaist играть (sudov)",
+  "Wutis вошь (sudov)",
+  "Wūras пруд (sudov)",
+  "Wurwas нора (sudov)",
+  "Wupjan облако (sudov)",
+  "Wunzus тщетный, безрезультатный (sudov)",
+  "Wulkas волк (naura recon)",
+  "Wūkas туман (sudov)",
+  "Wundas вода (sudov)",
+  "Wūgis рост (sudov)",
+  "Artefaktas артефакт (inter)",
+  "Mapa карта (by мапа )",
+  "Karta бумага, игральная карта (ital carta)",
+  "Bankonota банкнота (ital banconota)",
+  "Aurumas золото (lat aurum)",
+  "Mineralas минерал (inter)",
+  "Minera руда (recon)",
+  "Wardnica словарь (recon)",
+  "Twarka порядок (sudov)",
+  "Twarkīt наводить порядок (sudov)",
+  "Tumīt сгущать, делать гуще (sudov)",
+  "komponentas компонент (inter)",
+  "dokumentas документ (inter)",
+  "Laikīt хранить (lit laikyti)",
+  "Definīt определять (prg definītun)",
+  "Palīkit назначать (prg palīkitun)",
+  "Definīcija определение (prg definīcija)",
+  "Akordeonas аккордеон (inter)",
+  "taikingis аккуратный (prg taikīngis)",
+  "Akkauntas аккаунт (inter)",
+  "Takingumas аккуратность (recon)",
+  "Dagutas дёготь (prg daguts)"
 ];
 
 
 function parseEntry(raw) {
+  // Prefer "Word – translation (source)"
   let m = raw.match(/^(.+?)\s*[–—-]\s*(.+?)(?:\s*\((.+)\))?\s*$/);
   if (m) {
     return { word: m[1].trim(), trans: m[2].trim(), source: m[3] ? m[3].trim() : "", raw };
   }
-  m = raw.match(/^([^\s].{0,40}?)\s+(.+?)(?:\s*\(([^)]+)\))?\s*$/);
+  // "Word translation (source)"
+  m = raw.match(/^([^\s].{0,45}?)\s+(.+?)(?:\s*\(([^)]+)\))?\s*$/);
   if (m) {
     return { word: m[1].trim(), trans: m[2].trim(), source: m[3] ? m[3].trim() : "", raw };
   }
