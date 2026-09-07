@@ -33,201 +33,78 @@
     top: 0;
     z-index: 100;
   }
-  header h1 {
-    font-size: 1.35rem;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-  }
-  header p {
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    margin-top: 0.25rem;
-  }
-  .tabs {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 1rem;
-  }
+  header h1 { font-size: 1.35rem; font-weight: 600; letter-spacing: -0.02em; }
+  header p { color: var(--text-muted); font-size: 0.85rem; margin-top: 0.25rem; }
+  .tabs { display: flex; gap: 0.5rem; margin-top: 1rem; }
   .tab-btn {
-    background: transparent;
-    border: 1px solid var(--border);
-    color: var(--text-muted);
-    padding: 0.5rem 1.25rem;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 0.95rem;
-    transition: all 0.15s;
+    background: transparent; border: 1px solid var(--border); color: var(--text-muted);
+    padding: 0.5rem 1.25rem; border-radius: 8px; cursor: pointer; font-size: 0.95rem; transition: all 0.15s;
   }
   .tab-btn:hover { background: var(--surface2); color: var(--text); }
-  .tab-btn.active {
-    background: var(--accent);
-    border-color: var(--accent);
-    color: white;
-  }
-  main {
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 1.5rem;
-  }
+  .tab-btn.active { background: var(--accent); border-color: var(--accent); color: white; }
+  main { max-width: 980px; margin: 0 auto; padding: 1.5rem; }
   .panel { display: none; }
   .panel.active { display: block; }
-  .search-box {
-    position: relative;
-    margin-bottom: 1.25rem;
-  }
+  .search-box { position: relative; margin-bottom: 1.25rem; }
   .search-box input {
-    width: 100%;
-    padding: 0.85rem 1rem 0.85rem 2.75rem;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    color: var(--text);
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.15s;
+    width: 100%; padding: 0.85rem 1rem 0.85rem 2.75rem; background: var(--surface);
+    border: 1px solid var(--border); border-radius: 12px; color: var(--text); font-size: 1rem; outline: none;
   }
   .search-box input:focus { border-color: var(--accent); }
-  .search-box .icon {
-    position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--text-muted);
-    pointer-events: none;
-  }
-  .stats {
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    margin-bottom: 1rem;
-  }
+  .search-box .icon { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); pointer-events: none; }
+  .stats { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem; }
   .legend-toggle {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 0.75rem 1rem;
-    cursor: pointer;
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--text);
-    font-size: 0.95rem;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 0.75rem 1rem;
+    cursor: pointer; margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center;
+    color: var(--text); font-size: 0.95rem;
   }
   .legend-content {
-    display: none;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-top: none;
-    border-radius: 0 0 10px 10px;
-    padding: 1rem;
-    margin-top: -1rem;
-    margin-bottom: 1rem;
-    white-space: pre-wrap;
-    font-size: 0.88rem;
-    color: var(--text-muted);
-    line-height: 1.6;
+    display: none; background: var(--surface); border: 1px solid var(--border); border-top: none;
+    border-radius: 0 0 10px 10px; padding: 1rem; margin-top: -1rem; margin-bottom: 1rem;
+    white-space: pre-wrap; font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;
   }
   .legend-content.open { display: block; }
   .entry {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 0.7rem 1rem;
-    margin-bottom: 0.5rem;
+    display: flex; align-items: center; gap: 0.75rem; background: var(--surface);
+    border: 1px solid var(--border); border-radius: 10px; padding: 0.7rem 1rem; margin-bottom: 0.5rem;
     transition: background 0.12s;
   }
   .entry:hover { background: var(--card-hover); }
-  .entry .word {
-    font-weight: 600;
-    min-width: 0;
-    flex-shrink: 0;
-    color: #93c5fd;
-  }
-  .entry .sep {
-    color: var(--text-muted);
-    flex-shrink: 0;
-  }
-  .entry .trans {
-    flex: 1;
-    min-width: 0;
-  }
+  .entry .word { font-weight: 600; flex-shrink: 0; color: #93c5fd; }
+  .entry .sep { color: var(--text-muted); flex-shrink: 0; }
+  .entry .trans { flex: 1; min-width: 0; }
   .entry .source {
-    flex-shrink: 0;
-    background: var(--source-bg);
-    color: var(--source-text);
-    font-size: 0.75rem;
-    padding: 0.2rem 0.55rem;
-    border-radius: 6px;
-    white-space: nowrap;
-    max-width: 220px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    flex-shrink: 0; background: var(--source-bg); color: var(--source-text); font-size: 0.75rem;
+    padding: 0.2rem 0.55rem; border-radius: 6px; white-space: nowrap; max-width: 220px;
+    overflow: hidden; text-overflow: ellipsis;
   }
-  .subtabs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    margin-bottom: 1.25rem;
-  }
+  .subtabs { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.25rem; }
   .subtab-btn {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    color: var(--text-muted);
-    padding: 0.45rem 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 0.9rem;
+    background: var(--surface); border: 1px solid var(--border); color: var(--text-muted);
+    padding: 0.45rem 1rem; border-radius: 8px; cursor: pointer; font-size: 0.9rem;
   }
   .subtab-btn:hover { color: var(--text); }
-  .subtab-btn.active {
-    background: var(--accent);
-    border-color: var(--accent);
-    color: white;
-  }
+  .subtab-btn.active { background: var(--accent); border-color: var(--accent); color: white; }
   .grammar-section {
-    display: none;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.5rem;
-    overflow-x: auto;
+    display: none; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.5rem; overflow-x: auto;
   }
   .grammar-section.active { display: block; }
   .grammar-section h1, .grammar-section h2, .grammar-section h3, .grammar-section h4 {
-    margin: 1.25rem 0 0.75rem;
-    font-size: 1.15rem;
+    margin: 1.25rem 0 0.75rem; font-size: 1.15rem;
   }
-  .grammar-section h1:first-child, .grammar-section > p:first-child {
-    margin-top: 0;
-  }
+  .grammar-section h1:first-child, .grammar-section > p:first-child { margin-top: 0; }
   .grammar-section p { margin: 0.6rem 0; }
   .grammar-section ul, .grammar-section ol { margin: 0.6rem 0 0.6rem 1.5rem; }
   .grammar-section li { margin: 0.3rem 0; }
-  .grammar-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1rem 0;
-    font-size: 0.88rem;
-  }
+  .grammar-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.88rem; }
   .grammar-table th, .grammar-table td {
-    border: 1px solid var(--border);
-    padding: 0.45rem 0.6rem;
-    text-align: left;
+    border: 1px solid var(--border); padding: 0.45rem 0.6rem; text-align: left;
   }
-  .grammar-table th {
-    background: var(--surface2);
-    font-weight: 600;
-  }
+  .grammar-table th { background: var(--surface2); font-weight: 600; }
   .grammar-table tr:nth-child(even) { background: rgba(255,255,255,0.02); }
   .grammar-section strong { color: #93c5fd; }
-  .no-results {
-    text-align: center;
-    color: var(--text-muted);
-    padding: 2rem;
-  }
+  .no-results { text-align: center; color: var(--text-muted); padding: 2rem; }
   @media (max-width: 600px) {
     .entry { flex-wrap: wrap; }
     .entry .source { max-width: 100%; }
@@ -618,6 +495,69 @@ XII. Pol польское заимствование</div>
 <p>Welit (мыть) + si –– welit si мыться</p>
 <p>По глаголам изменяется только первое слово, послелог si не
 меняется</p>
+<h1 id="причастия-и-деепричастия">Причастия и деепричастия</h1>
+<p>Причастия</p>
+<table class="grammar-table">
+<colgroup>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>Время</th>
+<th>Актив (Действительное)</th>
+<th>Пассив (Страдательное)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Настоящее</td>
+<td>Skaitītantis</td>
+<td>Skaitītams</td>
+</tr>
+<tr class="even">
+<td>Прошедшее</td>
+<td>skaitītis</td>
+<td>skaitītas</td>
+</tr>
+<tr class="odd">
+<td>Перевод наст.</td>
+<td>читающий</td>
+<td>читаемый</td>
+</tr>
+<tr class="even">
+<td>Перевод прошедш.</td>
+<td>читавший</td>
+<td>прочитан</td>
+</tr>
+</tbody>
+</table>
+<p>деепричастия</p>
+<table class="grammar-table">
+<colgroup>
+<col style="width: 50%"/>
+<col style="width: 50%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>Одновременность</th>
+<th>Преждевременность (Сделав что-то в прошлом)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>skaitidant</td>
+<td>Skaitītot</td>
+</tr>
+<tr class="even">
+<td>Читая</td>
+<td>Читав</td>
+</tr>
+</tbody>
+</table>
+<p>Прилагательные tas+is</p>
+<p>Skaitītasis прочитанный</p>
 
     </div>
     <div id="sub-prefixes" class="grammar-section">
@@ -1174,7 +1114,6 @@ const DICT_ENTRIES = [
   "Laugai волосы (naura recon)",
   "Wendoris живот, пузо, брюхо (naura ist)",
   "Skaitīt читать (lit skaityti)",
-  "Tibt (naura ist)",
   "Kuos пёс (naura recon)",
   "Zirgos конь (naura recon)",
   "Ziro озеро (naura ist)",
@@ -1330,7 +1269,7 @@ const DICT_ENTRIES = [
   "Dangtis крышка (lit dangtis)",
   "Spartint укреплять (prg spārtintun)",
   "Uzspartint утверждать, закреплять (recon)",
-  "Sparte сила (sudov)",
+  "Sparta сила (sudov)",
   "Biras берёза (naura recon)",
   "Rist катить (sudov)",
   "Kaldis холодный (naura recon)",
@@ -1457,21 +1396,255 @@ const DICT_ENTRIES = [
   "taikingis аккуратный (prg taikīngis)",
   "Akkauntas аккаунт (inter)",
   "Takingumas аккуратность (recon)",
-  "Dagutas дёготь (prg daguts)"
+  "Dagutas дёготь (prg daguts)",
+  "Entikriskai именно (prg entikriskai)",
+  "Fiksacija фиксация (inter)",
+  "Fiksacēt фиксировать (inter)",
+  "Nomos имя, название (naura ist)",
+  "Nomēt называть, именовать (naura recon)",
+  "Wakīt звать (prg wakītun)",
+  "Wekt кричать (prg wektwei)",
+  "Wakas крик (prg waks)",
+  "Tartis голос (sudova)",
+  "Tartit голосовать (recon)",
+  "Tansīt тащить, тянуть (sudov)",
+  "Tane опухоль (sudov)",
+  "Sezonas сезон (inter)",
+  "Stadan тогда (sudov)",
+  "Panzdau потом (prg panzdau)",
+  "Palikkis потомок (prg palikkis)",
+  "Beggi ибо, потому что (prg beggi)",
+  "Krosa цвет (sudov)",
+  "Girdet слушать (naura recon)",
+  "Girdes слух (naura recon)",
+  "Metodas метод (inter)",
+  "Meditacija (inter)",
+  "Meditacēt медитировать (inter)",
+  "Mentit лгать, врать (prg mēntitun)",
+  "Lazta кровать (prg laztā)",
+  "Reddiskas ложный (prg reddisks)",
+  "Lappinis ложка (prg lappinis)",
+  "Kapt рыть, копать (prg kaptun)",
+  "Lapta лопата (prg lāptā)",
+  "Reddan ложь (prg reddan)",
+  "Preisikas враг (prg prēisiks)",
+  "Welt крутить, вращать (prg weltun)",
+  "Dauba овраг, впадина (prg dāubā)",
+  "Draugaut общаться (prg drāugatwei)",
+  "Enjuksna навык (prg enjuksnā)",
+  "Jukt привыкать (prg juktwei)",
+  "Juksenis привычка (prg juksenis)",
+  "Aušaut занимать, брать в долг (prg aušaūtun)",
+  "Aušausenis заём (prg aušaūsenis)",
+  "Dontis зуб (naura ist)",
+  "Sirgt болеть (prg sīrgtwei)",
+  "Lemt ломать (prg lemtun)",
+  "Ambicija амбиция (inter)",
+  "Tētis дед (sudov)",
+  "Ader или (sudov)",
+  "Tērpaut пользоваться (prg tērpautun)",
+  "Paderas отец (naura recon)",
+  "Rekonstrukcija реконструкция (inter)",
+  "Leitawa Литва (sudov)",
+  "Leitawis литовец (recon)",
+  "Latawa Латвия (sudov)",
+  "Patikot замышлять, задумывать, зачинать (sudov)",
+  "Terpa профит, польза (sudov)",
+  "Luba доска (sudov)",
+  "Kaulas кость (sudov)",
+  "Klupstis колено (prg klupstis)",
+  "Ane бабушка (sudov)",
+  "Reizan раз (prg rēizan)",
+  "Debas размер, величина (prg debs)",
+  "Telefonas телефон (inter)",
+  "Šaltinis источник (lit šaltinis)",
+  "Aps источник, колодец (prg aps)",
+  "Artikelas статья, артикль (prg artīkels)",
+  "Seit связывать (prg sēitun)",
+  "Saitan связь (prg sāitan)",
+  "Pira канал (sudov)",
+  "Perwakaut звонить, звать (sudov)",
+  "Perwakausenis звонок (recon)",
+  "Makīt уметь (prg makītun)",
+  "Ramint успокаивать (sudov)",
+  "Mera мир, покой (naura ist)",
+  "Perarwiskai конечно (sudov)",
+  "Pabart порицать (sudov)",
+  "Tairas погреб (sudov)",
+  "Wīnas вино (sudov)",
+  "Awinas баран (sudov)",
+  "Aldija каноэ (sudov)",
+  "Kalas сом (sudov)",
+  "Centran центр (prg centran)",
+  "Kaina цена (kaīna)",
+  "Kainit ценить, ставить цену (recon)",
+  "Werte ценность (prg wertē)",
+  "Wertikalis вертикаль (inter)",
+  "wertingis ценный (prg wertīngis)",
+  "Swērt весить (prg swērtwei)",
+  "Pawertint ценить (prg pawērintun)",
+  "Modelan модель (prg mōdelan)",
+  "Erlengwīt поднимать (sudov)",
+  "Leipa липа (sudov)",
+  "Mitīt менять (sudov)",
+  "Naikint отменять (sudov)",
+  "Nest нести (lit nešti)",
+  "Relaksaut отдыхать, расслабляться (prg relaksautwei)",
+  "Etdwest отдыхать (prg etdwestun)",
+  "Grandis кольцо (sudov)",
+  "Etdwessenis отдых (prg etdwessenis)",
+  "Gurt уставать (prg gurtwei)",
+  "Statūtan устав, закон (prg statūtan)",
+  "Kamaisas плечевой сустав (prg kamāiss)",
+  "Krūmstas сустав пальца руки, мыщелок (prg krūmsts)",
+  "Streipstas сустав (prg strēipsts)",
+  "Zilas трава (naura ist)",
+  "Mišta лес (naura ist)",
+  "Kilt подниматься (sudov)",
+  "Treppa лестница (prg treppi)",
+  "Lezt лезть (prg lēztun)",
+  "Ranis тюлень (prg rānis)",
+  "Eiswa рана (sudov)",
+  "Piaut резать (naura ist)",
+  "Piausenis порез (naura recon)",
+  "Tul’panas тюльпан (prg tulpāni)",
+  "Kirpt царапать (prg kīrptun)",
+  "Kirpas царапина (recon)",
+  "Ankstai рано (prg ānkstai)",
+  "Auli поздно (naura ist)",
+  "Aulis поздний (naura recon)",
+  "Wēlaut опаздывать (prg wēlautwei)",
+  "Wakaras вечер (sudov)",
+  "Ankstaina утро (prg ankstāina)",
+  "pussis половина, полу- (prg pussis)",
+  "Apstakla крышка (prg apstākli)",
+  "Era эра (inter)",
+  "Aerobika аэробика (inter)",
+  "Akrobatika акробатика (inter)",
+  "Pussisdins полдень (recon)",
+  "Wipt дрожать, трепетать, вибрировать (prg wiptwei)",
+  "Wipsenis дрожь, трепет, вибрация (recon)",
+  "Dribbint трясти (prg dribbintun)",
+  "Draggjas дрожжи (prg draggjas)",
+  "Skorpionas скорпион (inter)",
+  "Kjautawa скорлупа (prg kjaūtawa)",
+  "Kjauta кожа (prg kjaūtā)",
+  "apkjautaut облупливать (prg aukjaūtautun)",
+  "Butewingi обязательно (prg būtewingi)",
+  "butewingis обязательный (prg būtewingis)",
+  "west вести (prg westun)",
+  "Inwest вводить (prg enwestun)",
+  "Rektis прямой (naura ist)",
+  "Kreiwas кривой (krēiws)",
+  "Linija линия (inter)",
+  "Su dakgi справа (naura recon)",
+  "Dakgis правый (naura recon)",
+  "Wīrsas верх (prg wīrss)",
+  "Zemman низ (prg zemman)",
+  "Zemmingas низкий (recon)",
+  "Pirzdau перед (prg pirzdau)",
+  "Etwartai назад (prg etwārtai)",
+  "Ankstas ранний (prg ānksts)",
+  "Ankstai рано (prg ānkstai)",
+  "Kabinetas кабинет (inter)",
+  "Kawa кофе (by кава)",
+  "Kaffe кафе (inter)",
+  "Zaratis карп (prg zarāti)",
+  "Bjauskis камыш (prg bjaūski)",
+  "Regularus регулярный (prg regulārs)",
+  "Krepša сумка (prg krepši)",
+  "Sik сколько (ist naura)",
+  "Tewas отец (naura ist)",
+  "Tibt доверять (naura ist)",
+  "Tibsenis доверие (naura recon)",
+  "Wairit плакать (naura ist)",
+  "Waira плач (naura recon)",
+  "Assara слеза (prg assara)",
+  "Panzdaumas последний (prg panzdaums)",
+  "Erainas каждый (prg eraīns)",
+  "Kasītajas казначей (prg kasītajs)",
+  "Fiskas казна (prg fisks)",
+  "Žuwos рыба (recon naura)",
+  "Sportas спорт (inter)",
+  "Kalba спор (prg kalbā)",
+  "Kalbit спорить (prg kalbītun)",
+  "Zalas зал (inter)",
+  "Eksportas экспорт (inter)",
+  "Eksportēt экспортировать (inter)",
+  "Peisatlan ручка для письма (prg peisātlan)",
+  "Swarewingis важный (prg swarewīngis)",
+  "Dīrsus смелый, отважный (prg dīrsus)",
+  "Alwinnis карандаш (prg alwinnis)",
+  "Glastis точилка (prg glāstis)",
+  "Glast точить (prg glāstun)",
+  "Aust ткать (prg aūstun)",
+  "Ausla ткань (prg aūsli)",
+  "Zanse гусь (sudov)",
+  "Burris парус (prg burri)",
+  "Flotas флот (inter)",
+  "Rankena дверная ручка (prg rānkena)",
+  "Pridēt добавлять (lit pridėti)",
+  "Kugis шар (prg kūgis)",
+  "Skrittan круг (prg skrittan)",
+  "Skritis круглый (prg skrits)",
+  "Nomat нанимать (prg nōmatun)",
+  "Noma найм (prg nōma)",
+  "Arenda аренда (inter)",
+  "Arendēt арендовать (inter)",
+  "Zagint пилить (prg zāgintun)",
+  "Zaga пила (prg zāgi)",
+  "Puja пир (prg pūjā)",
+  "Nosis нос (naura ist)",
+  "Piwas пиво (inter)",
+  "Pianino пианино (inter)",
+  "Krokodilas крокодил (inter)",
+  "Gerbt уважать (lit gerbti)",
+  "Gerbsenis уважение (recon)",
+  "Waizdēt изображать (recon)",
+  "Realus реальный (lit realus)",
+  "Tikras реальный (lit tikras)",
+  "Realistikas реалистичный (lit realistiškas)",
+  "Spontaniskas спонтанный (lit spontaniškas)",
+  "Realībe реальность (lit realybė)",
+  "Daiktas вещь (lit daiktas)",
+  "Butas квартира (lit butas)",
+  "Kujja пихта (prg kujja)",
+  "Kruza кружка (prg krūzi)",
+  "Šokoladas шоколад (inter)",
+  "Kakao какао (inter)",
+  "Bandele булка (lit bandelė)",
+  "Flagas флаг (inter)",
+  "Soldatas солдат (inter)",
+  "Armija армия (inter)",
+  "Paradas парад (inter)",
+  "Paradēt парадировать (inter)",
+  "Maršas марш (inter)",
+  "Maršēt маршировать (inter)",
+  "Banneras баннер (inter)",
+  "Batonas батон (inter)",
+  "Bagetas багет (inter)",
+  "Amizus век (lit amižius)",
+  "Langus лёгкий (prg lāngus)",
+  "Gardan вкус (prg gardan)",
+  "Gardus вкусный (prg gradus)",
+  "Gardaut пробовать на вкус (prg gardautun)",
+  "Preigardan привкус (prg prēigardan)",
+  "Akcentas акцент (inter)",
+  "Arklubis пробор (prg ārklubis)",
+  "Korkas пробка (prg kōrks)",
+  "Štatiwas штатив (inter)",
+  "Turtingas богатый (lit turtingas)",
+  "Brangus дорогой (lit brangus)",
+  "Preiskonis приправа (lit prieskonis)",
+  "Pigus дешевый (lit pigus)"
 ];
 
 
 function parseEntry(raw) {
-  // Prefer "Word – translation (source)"
   let m = raw.match(/^(.+?)\s*[–—-]\s*(.+?)(?:\s*\((.+)\))?\s*$/);
-  if (m) {
-    return { word: m[1].trim(), trans: m[2].trim(), source: m[3] ? m[3].trim() : "", raw };
-  }
-  // "Word translation (source)"
+  if (m) return { word: m[1].trim(), trans: m[2].trim(), source: m[3] ? m[3].trim() : "", raw };
   m = raw.match(/^([^\s].{0,45}?)\s+(.+?)(?:\s*\(([^)]+)\))?\s*$/);
-  if (m) {
-    return { word: m[1].trim(), trans: m[2].trim(), source: m[3] ? m[3].trim() : "", raw };
-  }
+  if (m) return { word: m[1].trim(), trans: m[2].trim(), source: m[3] ? m[3].trim() : "", raw };
   return { word: "", trans: raw, source: "", raw };
 }
 
@@ -1479,7 +1652,6 @@ const entriesEl = document.getElementById("entries");
 const statsEl = document.getElementById("stats");
 const noResults = document.getElementById("noResults");
 const searchInput = document.getElementById("search");
-
 const parsed = DICT_ENTRIES.map(parseEntry);
 
 function render(filter = "") {
@@ -1494,19 +1666,14 @@ function render(filter = "") {
     div.className = "entry";
     let html = "";
     if (e.word) {
-      html += `<span class="word">${escapeHtml(e.word)}</span>`;
-      html += `<span class="sep">–</span>`;
+      html += `<span class="word">${escapeHtml(e.word)}</span><span class="sep">–</span>`;
     }
     html += `<span class="trans">${escapeHtml(e.trans)}</span>`;
-    if (e.source) {
-      html += `<span class="source" title="${escapeHtml(e.source)}">${escapeHtml(e.source)}</span>`;
-    }
+    if (e.source) html += `<span class="source" title="${escapeHtml(e.source)}">${escapeHtml(e.source)}</span>`;
     div.innerHTML = html;
     entriesEl.appendChild(div);
   });
-  statsEl.textContent = q
-    ? `Найдено: ${shown} из ${parsed.length}`
-    : `Всего записей: ${parsed.length}`;
+  statsEl.textContent = q ? `Найдено: ${shown} из ${parsed.length}` : `Всего записей: ${parsed.length}`;
   noResults.style.display = shown === 0 ? "block" : "none";
 }
 
@@ -1515,14 +1682,12 @@ function escapeHtml(s) {
 }
 
 searchInput.addEventListener("input", () => render(searchInput.value));
-
 document.getElementById("legendToggle").addEventListener("click", () => {
   const c = document.getElementById("legendContent");
   const a = document.getElementById("legendArrow");
   c.classList.toggle("open");
   a.textContent = c.classList.contains("open") ? "▲" : "▼";
 });
-
 document.querySelectorAll(".tab-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
@@ -1531,7 +1696,6 @@ document.querySelectorAll(".tab-btn").forEach(btn => {
     document.getElementById("panel-" + btn.dataset.tab).classList.add("active");
   });
 });
-
 document.querySelectorAll(".subtab-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     document.querySelectorAll(".subtab-btn").forEach(b => b.classList.remove("active"));
@@ -1540,7 +1704,6 @@ document.querySelectorAll(".subtab-btn").forEach(btn => {
     document.getElementById("sub-" + btn.dataset.sub).classList.add("active");
   });
 });
-
 render();
 </script>
 </body>
