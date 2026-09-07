@@ -556,6 +556,43 @@ XII. Pol польское заимствование</div>
 </table>
 <p>Прилагательные tas+is</p>
 <p>Skaitītasis прочитанный</p>
+<h1 id="сравнительная-степень">Сравнительная степень</h1>
+<table class="grammar-table">
+<colgroup>
+<col style="width: 31%"/>
+<col style="width: 21%"/>
+<col style="width: 22%"/>
+<col style="width: 24%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Категория</strong></th>
+<th><strong>Исходная форма</strong></th>
+<th><strong>Сравнительная степень</strong></th>
+<th><strong>Превосходная степень</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Наречие (Как?)</td>
+<td>wargai (плохо)</td>
+<td>wargasāk (хуже)</td>
+<td>wiswargasāk (хуже всего)</td>
+</tr>
+<tr class="even">
+<td>Прилагательное, жен. р. (Какая?)</td>
+<td>warga (плохая)</td>
+<td>wargasāka (худшая)</td>
+<td>wiswargasāka (самая худшая)</td>
+</tr>
+<tr class="odd">
+<td>Прилагательное, муж. р. (Какой?)</td>
+<td>wargas (плохой)</td>
+<td>wargasākas (худший)</td>
+<td>wiswargasākas (самый плохой)</td>
+</tr>
+</tbody>
+</table>
 
     </div>
     <div id="sub-prefixes" class="grammar-section">
@@ -684,6 +721,14 @@ XII. Pol польское заимствование</div>
 <td></td>
 </tr>
 <tr class="odd">
+<td><strong>Da</strong></td>
+<td>До-, окончательное приближение, окончательное окончание
+действия</td>
+<td>До-</td>
+<td>Daeit –– дойти</td>
+<td></td>
+</tr>
+<tr class="even">
 <td></td>
 <td></td>
 <td></td>
@@ -1409,7 +1454,7 @@ const DICT_ENTRIES = [
   "Tane опухоль (sudov)",
   "Sezonas сезон (inter)",
   "Stadan тогда (sudov)",
-  "Panzdau потом (prg panzdau)",
+  "Spot потом (naura ist)",
   "Palikkis потомок (prg palikkis)",
   "Beggi ибо, потому что (prg beggi)",
   "Krosa цвет (sudov)",
@@ -1662,7 +1707,7 @@ const DICT_ENTRIES = [
   "Miunce монета, жетон (germ die Münze)",
   "Tekt течь (prg tektwei)",
   "Del‘finas дельфин (inter)",
-  "Kraula (prg kraūli)",
+  "Kraula груз (prg kraūli)",
   "Kraunt грузить (prg kraūntun)",
   "Uzkraunt загружать (recon)",
   "Resursas ресурс (inter)",
@@ -1701,7 +1746,104 @@ const DICT_ENTRIES = [
   "Prawilt предавать (prg prawiltun)",
   "Prawilimas предательство (recon)",
   "Perwaldīt управлять (prg perwaldītun)",
-  "Buferas буфер (inter)"
+  "Buferas буфер (inter)",
+  "Deiktan место (prg deīktan)",
+  "Menas месяц (prg mēnss)",
+  "Mēstan город (prg mēstan)",
+  "Libai губы (naura ist)",
+  "Līgint судить (prg līgintun)",
+  "Līgan суд (prg līgan)",
+  "Līgintojas судья",
+  "Štanga штанга (inter)",
+  "Stanga спазм, судорога (prg stangā)",
+  "Baidakas грузовое судно",
+  "Līgintinas подсудимый (prg līgintinas)",
+  "Wālstas государство (prg wālsts)",
+  "Tikromiskan правота, право, справедливость (prg tikrōmiskan)",
+  "Juruspredencija юруспреденция (inter)",
+  "Kartonas картон (inter)",
+  "Staklis косяк, дверной косяк",
+  "Kastenas ящик, коробка (prg kastens)",
+  "Posta почта",
+  "Postinikas почтальон (prg pōstiniks)",
+  "Paktas пакт (inter)",
+  "Suradit заключать, сформировать (naura recon)",
+  "Dēlint воздействовать (prg dēlintun)",
+  "Indēlint влиять (prg endēlintun)",
+  "Indēlinsna влияние (prg endēlisnā)",
+  "Linnan лён (prg linnan)",
+  "Linta лента (prg linti)",
+  "Wūlakingis ленивый (prg wūlakingis)",
+  "Wūlakingumas лень (recon)",
+  "Wūlakit лениться (prg wūlakitwei)",
+  "Wūlakas лентяй (prg wūlakas)",
+  "Normalus нормальный (inter)",
+  "Normalai нормально (inter)",
+  "Sikga кровь (naura ist)",
+  "Adlis орёл (naura ist)",
+  "Pucas сова (naura recon)",
+  "Sula дыра (naura ist)",
+  "Fala мясо (naura ist)",
+  "Sinas гриб (naura recon)",
+  "Sinai грибы (naura recon)",
+  "Suit достаточно, вполне, хватит (prg sūit)",
+  "Tikslus точный (lit tikslus)",
+  "Tikslai точно (tiksliai)",
+  "Wijaut заворачивать, паковать, обертывать",
+  "Ars дым (naura ist)",
+  "Daina песня (naura ist)",
+  "Dainit петь (naura ist)",
+  "Persona персона, личность (inter)",
+  "Daug много (naura ist)",
+  "Plaut плавать (naura recon, от laudt через сравнение с другими балтскими языками)",
+  "Kaili тихо (naura ist)",
+  "Pikra грудь (naura ist)",
+  "Man мне (naura ist)",
+  "Mano моё, мой, моя, мои",
+  "Mano меня (naura recon)",
+  "Manam мне (naura recon)",
+  "Manai в мне (naura recon)",
+  "Wargas злой, плохой (wārgs)",
+  "Wargan зло (prg wārgan)",
+  "Weikt действовать (lit veikti)",
+  "Weikimas действие (lit veiksmas)",
+  "Prei к, у (prg prēi)",
+  "Alfabetas алфавит (latw alfabēts)",
+  "Almas яблоко (naura ist)",
+  "Sala солнце (naura ist)",
+  "Wisa всё (naura ist)",
+  "Mate мать, мама (naura recon, там есть ate, но анализировав иные балтские языки, понятно что не хватает m)",
+  "Mazuras поляк (naura recon, в оригинале mažugas, но скорее было mazuras, ибо мазурия близко)",
+  "Taūwis близкий (prg taūwisis)",
+  "Taūwint сближать (prg taūwintun)",
+  "Taūwiskan близкость",
+  "Minēt упоминать (lit minėti)",
+  "Plaika перхоть (prg plaīkā)",
+  "Nors хоть, хотя (lit nors)",
+  "Pareisenis переход (recon)",
+  "Tiltan мост (prg tiltan)",
+  "Grīnsla мостовая (prg grīnsli)",
+  "Grandika мостовина (prg grāndika)",
+  "Ebzentlint выделить, пометить, выделять (prg ebzentlintun)",
+  "Grēkit грешить (prg grēkitwei)",
+  "Prest решать (prg prestun)",
+  "Grēkas грех (prg grēks)",
+  "Tema тема (inter)",
+  "Postas пост (inter)",
+  "Postēt постить (inter)",
+  "Maketas макет (inter)",
+  "Segt застёгивать (prg segtun)",
+  "Zamukas замок (prg zāmuks)",
+  "Drezt разрывать, рвать (prg dreztun)",
+  "Drezztan разрыва (prg drezztan)",
+  "Drezazamukas молния, застёжка (prg drezazāmuks)",
+  "Drezzikiskas наглый (prg drezzikisks)",
+  "Drezziskan наглость (prg drezziskan)",
+  "Drezzawas хищный (prg drezzaws)",
+  "Wiskwei везде (prg wiskwēi)",
+  "Wisaddan всегда (prg wisaddan)",
+  "Ilgan долгота, длина (prg ilgan)",
+  "Blokas блок (inter)"
 ];
 
 
